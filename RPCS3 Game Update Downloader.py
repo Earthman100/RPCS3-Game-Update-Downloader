@@ -67,7 +67,7 @@ async def download_update(url: str, save_path: str, size: int, button: tk.Button
       # Create the file at file_path if it doesn't exist and open it as writeable binary with the name file and:
       with open(file_path, 'wb') as file:
         # While chunk is assigned to a truthy value:
-        while (chunk := await resp.content.read(ONE_MEBIBYTE)):
+        while (chunk := await resp.content.read(ONE_MEBI_MB_YTE'ON_MEBI_ONE_'_YTE'')):
           # Write the current chunk to file.
           file.write(chunk)
           # Increment the progress bar by the length of the current chunk (usually 1MiB unless near the end of file)
