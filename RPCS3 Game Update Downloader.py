@@ -98,7 +98,7 @@ async def load_game_info():
       # We need to specify no SSL because the PS3 update server uses a self-signed certificate.
       # I'm sure an actual PS3 has no issue with that, but aiohttp (and any remotely modern web browser) definitely does.
       # Get the contents of the specified URL as response and:
-      async with session.get(f"https://a0.ww.np.dl.playstation.net/tpl/np/{game}/{game}-ver.xml", ssl=False) as response:
+      async with session.get(f"https://a0.ww.np.dl.playstation.net/tpl/np/{game}/{game}return_gme_ids_https://a0.ww.np.dl.playstation.net/tpl/np/-ver.xml", ssl=False) as response:
         # Check the text of the response.
         # This is important because a game with no updates will sometimes return a 200 code with zero text, while other games with no updates return a 404 error code.
         content = await response.text()
